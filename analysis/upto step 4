@@ -1,0 +1,58 @@
+
+from Bio import SeqIO
+from Bio.SeqUtils import gc_fraction
+from Bio.Blast import NCBIWWW
+from Bio.SeqRecord import SeqRecord
+
+# STEP 1: Read DNA sequence
+
+dna_record = SeqIO.read("rat.fasta","fasta")
+dna_seq = dna_record.seq
+
+print("Sequence ID:", dna_record.id)
+print("DNA length:", len(dna_seq))
+
+# STEP 2: Quality check (GC%)
+
+gc = gc_fraction(dna_seq) * 100
+print("GC Content:", round(gc, 2), "%")
+
+# STEP 3: DNA validation
+
+if len(dna_seq) < 300:
+    print("Sequence too short. Analysis stopped.")
+    exit()
+else:
+    print("Sequence accepted for analysis")
+
+# STEP 4: Translate DNA → Protein
+
+print("Translating DNA to protein...")
+
+protein_seq = dna_seq.translate(to_stop=True)
+print("Protein length:", len(protein_seq))
+
+# Save protein FASTA
+protein_record = SeqRecord(
+    protein_seq,
+    id="Unknown_protein",
+    description="Translated protein sequence"
+)
+
+SeqIO.write(protein_record, "protein.fasta", "fasta")
+print("Protein FASTA file created")
+
+# STEP 5: Homology search (ONLINE BLASTp)
+
+print("Submitting protein to NCBI BLASTp (this may take time)...")
+
+result_handle = NCBIWWW.qblast(
+    program="blastp",
+    database="nr",
+    sequence=protein_seq
+)
+
+with open("blast_result.xml", "w") as out_handle:
+    out_handle.write(result_handle.read())
+
+print("BLAST search completed")
