@@ -1,0 +1,11 @@
+
+========================================
+STEP 3: FILTERING DECISION REPORT
+========================================
+Sequence ID: NM_001105815.1
+Length:      1126 bp
+GC Content:  45.91%
+----------------------------------------
+DECISION:    PASS
+REASON:      Sequence quality is within normal biological ranges.
+========================================

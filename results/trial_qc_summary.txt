@@ -1,0 +1,9 @@
+========================================
+SEQUENCE QUALITY CONTROL REPORT
+========================================
+Sequence ID:   NM_001105815.1
+Description:   NM_001105815.1 Rattus norvegicus intraflagellar transport 20 (Ift20), mRNA
+----------------------------------------
+Length:        1126 bp
+GC Content:    45.91%
+========================================
