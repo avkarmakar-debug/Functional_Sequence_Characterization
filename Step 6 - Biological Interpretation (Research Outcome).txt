@@ -1,9 +1,12 @@
 Biological Interpretation (Research Outcome)
-1. What does this sequence likely do? The sequence codes for the Intraflagellar Transport Protein 20 (IFT20). This protein is a critical component of the intraflagellar transport system, which acts like a "freight train" for cells. It is responsible for moving proteins from the cell body into the cilium (a hair-like structure on the cell surface used for signaling and movement). Specifically, IFT20 is known to traffic membrane proteins to the ciliary tip.
+1. What does this sequence likely do?
+The sequence codes for the Intraflagellar Transport Protein 20 (IFT20). This protein is a critical component of the intraflagellar transport system, which acts like a "freight train" for cells. It is responsible for moving proteins from the cell body into the cilium (a hair-like structure on the cell surface used for signaling and movement). Specifically, IFT20 is known to traffic membrane proteins to the ciliary tip.
 
-2. Why do you think so? The computational pipeline successfully identified a specific Open Reading Frame (ORF) that translates into a functional protein sequence. When this translated sequence was compared against the comprehensive non-redundant (nr) protein database, it aligned almost perfectly with known IFT20 sequences from various rodent species, indicating that the sequence structure and function are highly conserved and specific to this protein family.
+2. Why do you think so?
+The computational pipeline successfully identified a specific Open Reading Frame (ORF) that translates into a functional protein sequence. When this translated sequence was compared against the comprehensive non-redundant (nr) protein database, it aligned almost perfectly with known IFT20 sequences from various rodent species, indicating that the sequence structure and function are highly conserved and specific to this protein family.
 
-3. What evidence supports this claim? The claim is supported by strong statistical evidence from the NCBI BLASTp analysis:
+3. What evidence supports this claim?
+The claim is supported by strong statistical evidence from the NCBI BLASTp analysis:
 
 Top Hit Identity: The query protein shares 100.0% identity (157/157 amino acids) with the intraflagellar transport protein 20 homolog in Rattus norvegicus (Accession: NP_001099285).
 
